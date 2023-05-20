@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-block: 1rem;
+  z-index: 999;
+}
+.logo img {
+  width: 350px;
+  margin-top: 15px;
+}
+.nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+} 
+.nav-list li {
+  list-style-type: none;
+}
+.nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  padding: .5rem 1.5rem;
+  border-radius: 999px;
+  transition: all .2s ease-in-out;
+}
+.navbar-container .nav-list li:hover a {
+  background-color: #394867;
+  color: white;
+}
+
+
+aside {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+aside .content-description {
+  flex: 1 1;
+}
+.content-description h1 {
+  font-size: 2.2rem;
+  margin-block: 1rem;
+}
+.content-description p {
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+}
+.content-description button {
+  padding: .8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #394867;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+.content-description button:hover {
+  border: 3px solid #394867;
+  color: #394867;
+  background-color: transparent;
+}
+.content-image {
+  flex: 1;
+  display: flex;
+}
+.content-image img {
+  margin: auto;
+  min-width: 250px;
+  width: 300px;
+  border-radius: 50px;
+} 
+
+.social-media {
+  height: 100%;
+  display: flex;
+  position: fixed;
+  inset-block: 0;
+  inset-inline-end: 0;
+}
+.social-media ul {
+  padding: 1.5rem 1rem;
+  margin: auto;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  background-color: #212A3E;
+ 
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.social-media li {
+  list-style-type: none;
+}
+.social-media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+  transition: all .1s ease-in-out;
+}
+.social-media li a:hover {
+  color: #89b0d9;
+}
+
+.featured-image {
+  width: 100%;
+  max-height: 200px;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center; 
+}
+
+.card {
+  box-shadow: 0 2px 8px 2px rgba(87, 87, 87, 0.2);
+  border-radius: 5px;
+  padding: 20px 100px 20px 100px;
+  margin-left:2px;
+  margin-right:2px;
+  margin-bottom: 3px;
+}
+.slider {
+  margin-top: 40px;
+  justify-content: space-around;
+  position: relative;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 15%;
+  width: auto;
+  padding: 40px 16px;
+  color: #053742;
+  font-weight: 500;
+  font-size: 28px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  cursor: pointer;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover {
+  background-color: #e8f0f2;
+}
+
+footer {
+  padding: 20px;
+  color: #fff;
+  background-color: #394867;
+  text-align: center;
+}
+
+footer p {
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+}
+
+#Education p{
+  text-align: center;
+}
+#Certificate p{
+text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: .5rem;
+  }
+
+  aside {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  aside .content-description .title {
+    font-size: 3rem;
+  }
+  aside .content-description p {
+    font-size: 1rem;
+  }
+  aside .content-image {
+    order: -1;
+  }
+
+  .content-description h1 {
+    font-size: 1.9rem;
+  }
+  .content-description p {
+    padding-right: 15px;
+  }
+
+  .card {
+    padding: 20px 65px 20px 65px;
+  }
+  .prev,
+  .next {
+    position: absolute;
+    top: 5%;
+    width: auto;
+    padding: 15px 15px; 
+  }
+}
+
